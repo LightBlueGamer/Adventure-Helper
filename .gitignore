@@ -5,6 +5,9 @@ node_modules/
 # Ignore tsc dist folder
 dist/
 
+# Ignore the test folder
+test/
+
 # Ignore JavaScript files
 **/*.js
 **/*.mjs
