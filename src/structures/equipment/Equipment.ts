@@ -1,6 +1,7 @@
 import type { Helmet, Necklace, Shirt, Chestplate, Gloves, Bracelets, Leggings, Boots } from '.';
 /**
  * Creates equipment with the given parameters.
+ * @category Equipment
  */
 export class Equipment {
   /**

@@ -2,7 +2,8 @@
     "extends": "@sapphire",
     "ignorePatterns": [
         "dist/",
-        "vite.config.ts"
+        "docs/",
+        "test/"
     ],
     "rules": {
         "no-tabs": "error",

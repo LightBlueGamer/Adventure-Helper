@@ -1,5 +1,6 @@
 /**
  * Creates attributes with the given parameters.
+ * @category Properties
  */
 export class Attributes {
   /**

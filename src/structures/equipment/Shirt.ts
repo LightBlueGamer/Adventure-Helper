@@ -2,6 +2,7 @@ import { Rarity, Attributes, uncommon } from '..';
 
 /**
  * Creates shirt with the given parameters.
+ * @category Equipment
  */
 export class Shirt {
   /**

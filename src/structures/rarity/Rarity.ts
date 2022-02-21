@@ -1,5 +1,6 @@
 /**
  * Creates a new rarity with the given parameters.
+ * @category Rarity
  */
 export class Rarity {
   /**

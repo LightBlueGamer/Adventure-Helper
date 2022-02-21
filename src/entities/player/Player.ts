@@ -2,6 +2,7 @@ import { Equipment } from '../..';
 
 /**
  * Creates a player with the given parameters or the default parameters.
+ * @category Entity
  */
 
 export class Player {

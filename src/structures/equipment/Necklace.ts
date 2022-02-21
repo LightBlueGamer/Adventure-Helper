@@ -2,6 +2,7 @@ import { Rarity, Attributes, uncommon } from '..';
 
 /**
  * Creates necklace with the given parameters.
+ * @category Equipment
  */
 export class Necklace {
   /**
