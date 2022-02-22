@@ -1,4 +1,15 @@
-import type { Helmet, Necklace, Shirt, Chestplate, Gloves, Bracelets, Leggings, Boots } from '.';
+import type { Boots } from './items/Boots';
+import type { Bracelets } from './items/Bracelets';
+import type { Chestplate } from './items/Chestplate';
+import type { Gloves } from './items/Gloves';
+import type { Helmet } from './items/Helmet';
+import type { Item } from './items/Item';
+import type { Leggings } from './items/Leggings';
+import type { Necklace } from './items/Necklace';
+import type { Offhand } from './items/Offhand';
+import type { Shirt } from './items/Shirt';
+import type { Weapon } from './items/Weapon';
+
 /**
  * Creates equipment with the given parameters.
  * @category Equipment
@@ -44,6 +55,16 @@ export class Equipment {
    * @see {@link Boots | Boots class} for more details.
    */
   public boots: Boots | null;
+  /**
+   * Determines the weapon of the equipment.
+   * @see {@link Weapon | Weapon class} for more details.
+   */
+  public weapon: Weapon | null;
+  /**
+   * Determines the offhand of the equipment.
+   * @see {@link Offhand | Offhand class} for more details.
+   */
+  public offhand: Offhand | null;
   public constructor(
     helmet: Helmet | null = null,
     necklace: Necklace | null = null,
@@ -52,7 +73,9 @@ export class Equipment {
     gloves: Gloves | null = null,
     bracelets: Bracelets | null = null,
     leggings: Leggings | null = null,
-    boots: Boots | null = null
+    boots: Boots | null = null,
+    weapon: Weapon | null = null,
+    offhand: Offhand | null = null
   ) {
     this.helmet = helmet;
     this.necklace = necklace;
@@ -62,5 +85,15 @@ export class Equipment {
     this.bracelets = bracelets;
     this.leggings = leggings;
     this.boots = boots;
+    this.weapon = weapon;
+    this.offhand = offhand;
+  }
+
+  public *[Symbol.iterator]() {
+    let item: Item;
+
+    for (item of this) {
+      yield item;
+    }
   }
 }

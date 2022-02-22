@@ -19,10 +19,15 @@ export class Attributes {
    * Determines the extra defense of the attributes.
    */
   public defense: number;
-  public constructor(health = 0, stamina = 0, mana = 0, defense = 0) {
+  /**
+   * Determines the extra damage of the attributes.
+   */
+  public damage: number;
+  public constructor(health = 0, stamina = 0, mana = 0, defense = 0, damage = 0) {
     this.health = health;
     this.stamina = stamina;
     this.mana = mana;
     this.defense = defense;
+    this.damage = damage;
   }
 }

@@ -1,10 +1,13 @@
-import { Rarity, Attributes, uncommon } from '..';
+import { Attributes } from '../../attributes/Attributes';
+import { uncommon } from '../../rarity/rarities';
+import type { Rarity } from '../../rarity/Rarity';
+import { Item } from './Item';
 
 /**
  * Creates helmet with the given parameters.
  * @category Equipment
  */
-export class Helmet {
+export class Helmet extends Item {
   /**
    * Determines the rarity of the helmet.
    */
@@ -23,6 +26,7 @@ export class Helmet {
    */
   public attributes: Attributes;
   public constructor(rarity: Rarity = uncommon, name = 'Helmet', description = 'A helmet', attributes: Attributes = new Attributes()) {
+    super(rarity, name, description, attributes);
     this.rarity = rarity;
     this.name = name;
     this.description = description;
