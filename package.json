@@ -1,6 +1,6 @@
 {
   "name": "adventure-helper",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A simple utility for making adventure games",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -18,7 +18,9 @@
     "format": "prettier --write src/**/*.ts",
     "prepublishOnly": "rollup-type-bundler",
     "build": "rollup -c rollup.bundle.ts",
-    "docs": "typedoc --categorizeByGroup true"
+    "docs": "typedoc --categorizeByGroup true",
+    "all": "npm run lint && npm run format && npm run docs && npm run build",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
