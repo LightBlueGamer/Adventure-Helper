@@ -3,7 +3,6 @@ import type { Bracelets } from './items/Bracelets';
 import type { Chestplate } from './items/Chestplate';
 import type { Gloves } from './items/Gloves';
 import type { Helmet } from './items/Helmet';
-import type { Item } from './items/Item';
 import type { Leggings } from './items/Leggings';
 import type { Necklace } from './items/Necklace';
 import type { Offhand } from './items/Offhand';
@@ -90,10 +89,15 @@ export class Equipment {
   }
 
   public *[Symbol.iterator]() {
-    let item: Item;
-
-    for (item of this) {
-      yield item;
-    }
+    yield this.necklace;
+    yield this.shirt;
+    yield this.chestplate;
+    yield this.gloves;
+    yield this.bracelets;
+    yield this.leggings;
+    yield this.helmet;
+    yield this.boots;
+    yield this.weapon;
+    yield this.offhand;
   }
 }

@@ -3,7 +3,8 @@
     "ignorePatterns": [
         "dist/",
         "docs/",
-        "test/"
+        "test/",
+        "jest.config.ts"
     ],
     "rules": {
         "no-tabs": "error",
